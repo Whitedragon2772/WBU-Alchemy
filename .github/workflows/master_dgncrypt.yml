@@ -10,15 +10,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build: 
     runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Node.js version
+      - name: dgncrypt
         uses: actions/setup-node@v1
-        with:
+        with: 
           node-version: '12.13.0'
 
       - name: npm install, build, and test
@@ -30,27 +30,27 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: node-app
+          name: dgncrypt
           path: .
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: ${{ https://github.com/Azure/webapps-deploy }}
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: node-app
+          name: node-app [dgncrypt]
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
           app-name: 'dgncrypt'
-          slot-name: 'Production'
+          slot-name: 'crypt'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2 }}
           package: .
