@@ -1,13 +1,13 @@
 {
-  "name": "kaleido-contract-templates",
-  "version": "1.0.0",
-  "description": "Template contracts offered by Kaleido Smart Contract Management",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Kaleido",
-  "license": "ISC",
-  "dependencies": {
-    "@openzeppelin/contracts": "4.9.0"
-  }
+  "web": 
+  {
+    "client_id": "979095463847-mgttdudhl69jmnubjj7c4dnameuf5a3p.apps.googleusercontent.com",
+    "project_id": "draconian-dollar",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": ["https://draconian-dollar.firebaseapp.com/__/auth/handler"],
+    "javascript_origins": ["http://localhost", "http://localhost:5000", "http://localhost:3000", "https://draconian-dollar.firebaseapp.com"]
+    }
 }

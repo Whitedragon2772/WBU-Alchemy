@@ -54,3 +54,4 @@ jobs:
           slot-name: 'crypt'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2 }}
           package: .
+          
