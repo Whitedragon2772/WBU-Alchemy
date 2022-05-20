@@ -2,3 +2,20 @@
 vscode:
   extensions:
     - ms-azuretools.vscode-docker
+tasks:
+  - name: terminal 1
+    before: echo 'before script'
+    init: echo 'init script'
+    command: echo 'start script'
+  - name: terminal 2
+    init: npm install
+    command: echp 'npm start
+  - name: terminal 3
+    init: echo 'this is terminal3
+    command: echo 'hello from wbu-alch
+
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 3000
+    onOpen: open-preview
