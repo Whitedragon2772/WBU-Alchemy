@@ -53,4 +53,8 @@ jobs:
           app-name: 'dgncrypt'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2 }}
-          package: .
+          package: 
+          
+      - name: Azure WebApp
+          uses: 'Azure/webapps-deploy@v2
+          build:  
