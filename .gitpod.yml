@@ -2,10 +2,6 @@
 vscode:
   extensions:
     - ms-azuretools.vscode-docker
-
-vscode:
-  extensions:
-    - ms-azuretools.vscode-docker
 tasks:
   - name: terminal 1
     before: echo 'before script'
