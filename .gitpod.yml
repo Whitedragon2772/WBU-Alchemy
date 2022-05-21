@@ -2,6 +2,10 @@
 vscode:
   extensions:
     - ms-azuretools.vscode-docker
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
 tasks:
   - name: terminal 1
     before: echo 'before script'
@@ -13,7 +17,22 @@ tasks:
   - name: terminal 3
     init: echo 'this is terminal3
     command: echo 'hello from wbu-alch
-
+  - name: 'Build
+       and deploy Node.js app to Azure Web App'
+  - name: 'dgncrypt
+      push: secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2
+  - name: 'master
+      workflow_dispatch
+      jobs:
+      build:
+      command: actions/checkout@v2
+      command: npm run build'
+  - name: 'Productioninit:
+             {
+               { steps.deploy-to-webapp.outputs.webapp-url }
+               }'
+  - name: 'Deploy to Azure Web App'
+  
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
