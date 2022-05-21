@@ -5,53 +5,60 @@ name: Build and deploy Node.js app to Azure Web App - dgncrypt
 
 on:
   push:
-    branches:
-      - master
+    branches: master
   workflow_dispatch:
-
 jobs:
   build:
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Node.js version
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12-lts'
-
-      - name: npm install, build, and test
-        run: |
+         uses: actions/checkout
+         command: actions/node-setup
+         with:
+         node: init,build,test,
+         
           npm install
           npm run build --if-present
           npm run test --if-present
-      
-      - name: Upload artifact for deployment job
+          
+  name: 
         uses: actions/upload-artifact@v2
         with:
-          name: node-app
-          path: .
-
+          name: wbualchemy-app
   deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
+       runs-on: ubuntu-latest
+         environment:ubuntu-latest
+  -name:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      steps:
+  -name:  'download artifact from build job
+
+jobs:
+  test:
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node_version: ['8', '10', '12']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: node-app
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node_version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node_version }}
 
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v2
-        id: deploy-to-webapp
-        with:
+    - name: npm install, build and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm test
+  -name:'wbualchemy-app
+          'Deploy to Azure Web App'
+            uses:'azure/webapps-deploy  
+            id:'deploy-to-webapp
           app-name: 'dgncrypt'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_1234 }}
-          package: .
-
+          publish-profile: ${
+          { secrets.AzureAppService }
+      }
