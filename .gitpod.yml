@@ -9,7 +9,7 @@ tasks:
     command: echo 'start script'
   - name: terminal 2
     init: npm install
-    command: echp 'npm start
+    command: echo 'npm start
   - name: terminal 3
     init: echo 'this is terminal3
     command: echo 'hello from wbu-alch
