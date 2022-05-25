@@ -1,7 +1,6 @@
+- name: Azure WebApp
+  uses: Azure/webapps-deploy@v2
 
-vscode:
-  extensions:
-    - ms-azuretools.vscode-leap
 tasks:
   - name: terminal 1
     before: echo 'before script'
