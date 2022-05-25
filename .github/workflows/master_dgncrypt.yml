@@ -1,16 +1,11 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy Node.js app to Azure Web App - dgncrypt
-
+-name: Azure Webapp
+uses: Azure/webapps-deploy@v2
 on:
   push:
-    branches:
-      - master
+    branches: -master
   workflow_dispatch:
-
-jobs:
-  build:
+  jobs:
+   build:
     runs-on: windows-latest
 
     steps:
@@ -34,13 +29,13 @@ jobs:
           path: .
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: android-latest
     needs: build
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    steps:
+    steps: 
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
@@ -50,11 +45,10 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'dgncrypt'
+          app-name: 'wbu-alchemy'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2 }}
+          publish-profile: ${{secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2 }}
           package: 
           
       - name: Azure WebApp
-          uses: 'Azure/webapps-deploy@v2
-          build:  
+          uses: Azure/webapps-deploy@v2.
