@@ -1,7 +1,7 @@
 
 vscode:
   extensions:
-    - ms-azuretools.vscode-docker
+    - ms-azuretools.vscode-leap
 tasks:
   - name: terminal 1
     before: echo 'before script'
@@ -15,7 +15,7 @@ tasks:
     command: echo 'hello from wbu-alch
   - name: 'Build
        and deploy Node.js app to Azure Web App'
-  - name: 'dgncrypt
+  - name: 'wbu-alchemy
       push: secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2
   - name: 'master
       workflow_dispatch
