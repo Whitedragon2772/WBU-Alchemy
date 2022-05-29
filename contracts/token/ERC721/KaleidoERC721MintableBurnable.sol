@@ -4,7 +4,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721Burnable.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract KaleidoERC721MintableBurnable is ERC721Burnable, AccessControl {
-    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant MINTER_ROLE = ("MINTER_ROLE");
 
     constructor(string memory name, string memory symbol) ERC721(name, symbol) public {
         _setupRole(DEFAULT_ADMIN_ROLE, _msgSender());
