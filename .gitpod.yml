@@ -1,4 +1,36 @@
+dgncrypt-crypto-vault
 
 vscode:
   extensions:
     - vymarkov.firebase-explorer
+- name: Azure WebApp
+  uses: Azure/webapps-deploy@v2
+
+tasks:
+  - name: terminal 1
+    before: echo 'before script'
+    init: echo 'init script'
+    command: echo 'start script'
+  - name: terminal 2
+    init: npm install
+    command: echo 'npm start
+  - name: terminal 3
+    init: echo 'this is terminal3
+    command: echo 'hello from wbu-alch
+  - name: 'Build
+       and deploy Node.js app to Azure Web App'
+  - name: 'wbu-alchemy
+      push: secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BA6C1F7769764881A9BA1A3CB1224EE2
+  - name: 'master
+      workflow_dispatch
+      jobs:
+      build:
+      command: actions/checkout@v2
+      command: npm run build'
+  - name: 'Productioninit:
+             {
+               { steps.deploy-to-webapp.outputs.webapp-url }
+               }'
+  - name: 'Deploy to Azure Web App'
+ports:
+  - port: 3000
