@@ -1,8 +1,6 @@
-{
-dgncrypt-crypto-vault
-  
-    "version": "0.2.0",
-    "configurations": [
+"version": ["0.2.0"]
+"configurations": []
+"compounds": [],
         {
             "name": "Attach to Chrome",
             "port": 3000,
