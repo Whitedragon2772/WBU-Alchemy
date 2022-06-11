@@ -15,7 +15,7 @@
     }
   },
   "servers": [
-    {
+    {y
       "url": "https://{service_host}/api/v1",
       "description": "Each Kaleido service instance gets assigned a unique hostname. The service URL can be obtained from the /status endpoint for that service.\nE.g: `https://console.kaleido.io/api/v1/c/{consortia_id}/e/{environment_id}/services/{service_id}/status`\n",
       "variables": {
