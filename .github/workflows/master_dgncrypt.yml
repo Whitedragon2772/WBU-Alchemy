@@ -7,9 +7,9 @@ on:
 dgncrypt-crypto-vault
 
 jobs:
-  build: 
-  jobs:
-   build:
+  -name npx quorum-dev-quickstart
+    jobs:
+  build: npx hardhat
  master
     runs-on: windows-latest
 
@@ -31,9 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dgncrypt
-          path: .
-
-  deploy: dgncrypt-crypto-vault
+          path:      deploy: dgncrypt-crypto-vault
     runs-on: windows-latest
 
     runs-on: android-latest
