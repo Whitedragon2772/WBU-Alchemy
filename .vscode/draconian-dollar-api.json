@@ -5,8 +5,8 @@
       "title": "Zero Knowledge Token Transfer API",
       "description": "With draconian Zero Knowledge Token Transfer service, transfers are conducted with Zero Knowledge Proofs such that the transactions are both confidential (the balances and transfer amounts are concealed),\nand anonymous (the sender and receiver identities are concealed).\n\nCurrently the service supports shielding ERC20 tokens. Ethereum accounts holding balances in ERC20 tokens can use their tokens to fund a corresponding shielded account\nin the service, and obtain equal amount shielded tokens. They the shielded tokens can be transfers among the shielded accounts owned by the participating organizations.\n\nShielded token balances can be used to exchange back to ERC20 tokens by withdrawing.\n\nThis service is part of Nirvanay Lifestyle Incs Lab's experimental catalog.\n\n<img style=\"max-width: 75%;\" src=\"images/infographic_tokenzkp.png\" alt=\"tokenzkp\">\n\n# Authentication\n\n<!-- ReDoc-Inject: <security-definitions> -->",
       "contact url":
-       "name": "DraconianWallet"
-        "url": "https://cs210032002050c3466.blob.core.windows.net"
+       "name", "DraconianWallet"
+        "url: /Draconian.svg, https://cs210032002050c3466.blob.core.windows.net"
       },
       "x-logo": {
         "url": "images/Draconian.svg",
