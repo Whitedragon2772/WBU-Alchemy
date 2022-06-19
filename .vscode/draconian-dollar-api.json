@@ -3,21 +3,21 @@
     "info": {
       "version": "1.0",
       "title": "Zero Knowledge Token Transfer API",
-      "description": "With Kaleido's Zero Knowledge Token Transfer service, transfers are conducted with Zero Knowledge Proofs such that the transactions are both confidential (the balances and transfer amounts are concealed),\nand anonymous (the sender and receiver identities are concealed).\n\nCurrently the service supports shielding ERC20 tokens. Ethereum accounts holding balances in ERC20 tokens can use their tokens to fund a corresponding shielded account\nin the service, and obtain equal amount shielded tokens. They the shielded tokens can be transfers among the shielded accounts owned by the participating organizations.\n\nShielded token balances can be used to exchange back to ERC20 tokens by withdrawing.\n\nThis service is part of Kaleido Lab's experimental catalog.\n\n<img style=\"max-width: 75%;\" src=\"images/infographic_tokenzkp.png\" alt=\"tokenzkp\">\n\n# Authentication\n\n<!-- ReDoc-Inject: <security-definitions> -->",
-      "contact": {
-        "name": "Kaleido",
-        "url": "https://api.kaleido.io"
+      "description": "With draconian Zero Knowledge Token Transfer service, transfers are conducted with Zero Knowledge Proofs such that the transactions are both confidential (the balances and transfer amounts are concealed),\nand anonymous (the sender and receiver identities are concealed).\n\nCurrently the service supports shielding ERC20 tokens. Ethereum accounts holding balances in ERC20 tokens can use their tokens to fund a corresponding shielded account\nin the service, and obtain equal amount shielded tokens. They the shielded tokens can be transfers among the shielded accounts owned by the participating organizations.\n\nShielded token balances can be used to exchange back to ERC20 tokens by withdrawing.\n\nThis service is part of Nirvanay Lifestyle Incs Lab's experimental catalog.\n\n<img style=\"max-width: 75%;\" src=\"images/infographic_tokenzkp.png\" alt=\"tokenzkp\">\n\n# Authentication\n\n<!-- ReDoc-Inject: <security-definitions> -->",
+      "contact url":
+       "name": "DraconianWallet"
+        "url": "https://cs210032002050c3466.blob.core.windows.net"
       },
       "x-logo": {
-        "url": "images/kaleido.svg",
-        "altText": "Kaleido Logo",
+        "url": "images/Draconian.svg",
+        "altText": "draconian Logo",
         "backgroundColor": "#462de0"
       }
     },
     "servers": [
       {
-        "url": "https://{service_host}/api/v1",
-        "description": "Each Kaleido service instance gets assigned a unique hostname. The service URL can be obtained from the /status endpoint for that service.\nE.g: `https://console.kaleido.io/api/v1/c/{consortia_id}/e/{environment_id}/services/{service_id}/status`\n",
+        "url": "https://",
+        "description": "Each draconian service instance gets assigned a unique hostname. The service URL can be obtained from the /status endpoint for that service.\nE.g: `https://cs210032002050c3466.z13.web.core.windows.net}/status`\n",
         "variables": {
           "service_host": {
             "default": "service_host"
@@ -324,13 +324,12 @@
         "bearer_token": {
           "type": "http",
           "scheme": "bearer",
-          "description": "Kaleido API for platform resources are authenticated using the Bearer token in the `Authorization` HTTP header. The token can either be the API Key created in the Kaleido user's account, or the JWT token\nissued to the user's browser as a cookie after logging in. The JWT token is set to expire in one hour.\n"
+          "description": "Draconian API for platform resources are authenticated using the Bearer token in the `Authorization` HTTP header. The token can either be the API Key created in the Draconian  user's account, or the JWT token\nissued to the user's browser as a cookie after logging in. The JWT token is set to expire in one hour.\n"
         },
         "app_creds": {
           "type": "http",
           "scheme": "basic",
-          "description": "Kaleido API for marketplace services are authenticated using application credentials. The username and password must be created in the environment containing the service instance as \"Application Credentials\". For more\ndetails see the [documentation on App Credentials](https://docs.kaleido.io/developers/app/credentials/).\n"
-        }
+          "description": "Draconian API for marketplace services are authenticated using application credentials. The username and password must be created in the environment containing the service instance as \"Application Credentials\". For more\ndetails see the [documentation on App Credentials](https://cs210032002050c3466.dfs.core.windows.net/).\n"  }
       },
       "schemas": {
         "Error": {
