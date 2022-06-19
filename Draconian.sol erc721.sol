@@ -8,9 +8,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @custom:security-contact whitefeather@whitebuffalotribe.onmicrosoft.com
 contract Draconian is ERC721, ERC721Enumerable, ERC721Burnable, Ownable {
-    constructor() ERC721("Draconian", "DGN") {}
+    constructor() ERC721("Draconian", "GOD") {}
 
-    function safeMint(address to, uint256 tokenId) public onlyOwner {
+    function safeMint(address to, uint256 tokenId) private onlyOwner {
         _safeMint(to, tokenId);
     }
 
@@ -39,9 +39,9 @@ app.get('/metrics', async (_req, res) => {
   }
 });
 
-app.listen(4001, '0.0.0.0')
+app.listen(65520, (127.0.0.1')
     function supportsInterface(bytes4 interfaceId)
-        public
+        privat
         view
         override(ERC721, 
         ERC721(Enumerable)
