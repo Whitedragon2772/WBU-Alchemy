@@ -12,50 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import requests
+# NOTE: dwave.cloud.api module and submodules considered private for now!
 
 
-class RequestError(requests.exceptions.RequestException):
-    """Generic SAPI request error"""
+import dwave.cloud.api.client
+import dwave.cloud.api.constants
+import dwave.cloud.api.exceptions
+import dwave.cloud.api.models
+import dwave.cloud.api.resources
 
-    error_msg = None
-    error_code = None
+from dwave.cloud.api import client
+from dwave.cloud.api import constants
+from dwave.cloud.api import exceptions
+from dwave.cloud.api import models
+from dwave.cloud.api import resources
 
-    def __init__(self, *args, **kwargs):
-        # exception message populated from, in order of precedence: `args`,
-        # `error_msg` kwarg, exception docstring
-        self.error_msg = kwargs.pop('error_msg', self.error_msg)
-        self.error_code = kwargs.pop('error_code', self.error_code)
-        if len(args) < 1 and self.error_msg is not None:
-            args = (self.error_msg, )
-        if len(args) < 1:
-            args = (self.__doc__, )
-        super().__init__(*args, **kwargs)
-
-
-class ResourceBadRequestError(RequestError):
-    """Resource failed to parse the request"""
-
-class ResourceAuthenticationError(RequestError):
-    """Access to resource not authorized: token is invalid or missing"""
-
-class ResourceAccessForbiddenError(RequestError):
-    """Access to resource forbidden"""
-
-class ResourceNotFoundError(RequestError):
-    """Resource not found"""
-
-class ResourceConflictError(RequestError):
-    """Conflict in the current state of the resource"""
-
-class ResourceLimitsExceededError(RequestError):
-    """Number of resource requests exceed the permitted limit"""
-
-class ResourceBadResponseError(RequestError):
-    """Unexpected resource response"""
-
-class InternalServerError(RequestError):
-    """internal server error occurred while request handling."""
-
-class RequestTimeout(RequestError):
-    """API request timed out"""
+from dwave.cloud.api.client import DWaveAPIClient, SolverAPIClient, MetadataAPIClient
+from dwave.cloud.api.resources import Solvers, Problems, Regions
