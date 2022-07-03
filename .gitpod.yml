@@ -1,10 +1,9 @@
 dgncrypt-crypto-vault
 
 vscode:
-  extensions:
-    - vymarkov.firebase-explorer
-- name: Azure WebApp
-  uses: Azure/webapps-deploy@v2
+  extensions: draconian.firebase-explorer.net
+-name Azure WebApp
+    uses: Azure/webapps-deploy@v2
 
 tasks:
   - name: terminal 1
